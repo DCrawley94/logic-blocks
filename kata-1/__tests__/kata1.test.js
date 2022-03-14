@@ -120,13 +120,13 @@ describe('calculateTimeAsleep', () => {
 	});
 });
 
-describe.only('findSleepiest', () => {
+describe('findSleepiest', () => {
 	it('returns ID of sleepiest guard', () => {
 		const sleepers = {
 			'#2459': 18,
 			'#2460': 29,
 			'#2461': 11
 		};
-		expect(findSleepiest(sleepers)).toBe('#2460');
+		expect(findSleepiest(sleepers)).toBe(2460);
 	});
 });

@@ -1,6 +1,16 @@
 const { maxBy } = require('lodash');
 const data = require('./data-formatting');
 
+/*
+	This file aims to:
+
+	- organise data by the guards ID
+	- calculate the time each guard is asleep
+	- find the ID of sleepiest guard
+*/
+
+// ORGANISES DATA BY GUARD ID
+
 const sortByGuardID = (data) => {
 	const dataByGuardId = {};
 	currentGuard = '';
@@ -18,8 +28,7 @@ const sortByGuardID = (data) => {
 	return dataByGuardId;
 };
 
-const dataById = sortByGuardID(data);
-// console.log(dataById);
+// CALCULATES TIME EACH GUARD SPENT ASLEEP
 
 const calculateTimeAsleep = (data) => {
 	// create obj add key of guard id and tally time asleep
@@ -44,14 +53,16 @@ const calculateTimeAsleep = (data) => {
 	return sleepCounter;
 };
 
-const sleepyGuards = calculateTimeAsleep(dataById);
+// FINDS SLEEPIEST GUARD
 
 findSleepiest = (sleepyRef) => {
 	// Lodash maxBy is like the max method but accepts iteratee
 	// takes array of IDs and calls function on them to work out which guard is sleepiest
-	return maxBy(Object.keys(sleepyRef), (id) => sleepyRef[id]);
+	return +maxBy(Object.keys(sleepyRef), (id) => sleepyRef[id]).substring(1);
 };
 
+const dataById = sortByGuardID(data);
+const sleepyGuards = calculateTimeAsleep(dataById);
 const sleepiestGuardID = findSleepiest(sleepyGuards);
 
 module.exports = {
