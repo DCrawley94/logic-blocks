@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const rawData = fs.readFileSync('data.txt').toString().split('\n');
+const rawData = fs.readFileSync('kata-1/data.txt').toString().split('\n');
 
 const formattedData = rawData.map((datum) => {
 	// use regex and string manip to pull out date and time
