@@ -3,32 +3,29 @@ const fs = require('fs');
 const rawData = fs.readFileSync('data.txt').toString().split('\n');
 
 const formattedData = rawData.map((datum) => {
+	// use regex and string manip to pull out date and time
 	const [date, time] = datum
 		.match(/\[.*\]/)[0]
 		.slice(1, -1)
 		.split(' ');
-	const dateToParse = `${date}T${time}:00.000`;
-	const dateObj = new Date(Date.parse(dateToParse));
 
+	// use the date and time to create date string and create new Date object
+	const dateObj = new Date(Date.parse(`${date}T${time}:00.000`));
+
+	// use regex to pull out message
 	const log = datum.match(/\] (.*)/)[1];
+
 	return { log, date: dateObj };
 });
+/*
+Function formats the data into array of objects with two properties:
+
+log: message string
+date: date object for log
+*/
 
 const chronologicalData = formattedData.sort(
 	(datum1, datum2) => datum1.date - datum2.date
 );
 
-const dataByGuardId = {};
-currentGuard = '';
-
-chronologicalData.forEach((datum) => {
-	const guardID = datum.log.match(/#\d*/) ? datum.log.match(/#\d*/)[0] : null;
-	if (guardID && !dataByGuardId.hasOwnProperty(guardID))
-		dataByGuardId[guardID] = [];
-	if (guardID && !(currentGuard === guardID)) {
-		currentGuard = guardID;
-	}
-	dataByGuardId[currentGuard].push(datum);
-});
-
-module.exports = dataByGuardId;
+module.exports = chronologicalData;
