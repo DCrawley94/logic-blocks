@@ -1,5 +1,13 @@
 const fs = require('fs');
 
+/*
+This file aims to:
+
+- read input file and split into array on new line
+- format data nicely into log message and Date object
+- sort data chronologically
+*/
+
 const rawData = fs.readFileSync('kata-1/data.txt').toString().split('\n');
 
 const formattedData = rawData.map((datum) => {
@@ -17,12 +25,8 @@ const formattedData = rawData.map((datum) => {
 
 	return { log, date: dateObj };
 });
-/*
-Function formats the data into array of objects with two properties:
 
-log: message string
-date: date object for log
-*/
+// Function formats the data into array of objects with two properties: {log: MESSAGE_STRING, date: DATE_OBJ}
 
 const chronologicalData = formattedData.sort(
 	(datum1, datum2) => datum1.date - datum2.date
