@@ -1,7 +1,4 @@
-const {
-	calculateTimeAsleep,
-	findSleepiest
-} = require('../find-sleepiest-guard');
+const { calculateTimeAsleep, findSleepiest } = require('../findSleepiestGuard');
 
 describe('calculateTimeAsleep', () => {
 	test('should return 0 for single guard who never sleeps', () => {
@@ -127,6 +124,6 @@ describe('findSleepiest', () => {
 			'#2460': 29,
 			'#2461': 11
 		};
-		expect(findSleepiest(sleepers)).toBe(2460);
+		expect(findSleepiest(sleepers)).toBe('#2460');
 	});
 });

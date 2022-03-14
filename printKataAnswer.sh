@@ -1,0 +1,1 @@
+node ./kata-$1/bringItAllTogether.js

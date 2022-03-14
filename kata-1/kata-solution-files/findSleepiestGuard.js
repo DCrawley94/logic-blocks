@@ -1,5 +1,5 @@
 const { maxBy } = require('lodash');
-const data = require('./data-formatting');
+const data = require('./dataFormatting');
 
 /*
 	This file aims to:
@@ -58,7 +58,7 @@ const calculateTimeAsleep = (data) => {
 findSleepiest = (sleepyRef) => {
 	// Lodash maxBy is like the max method but accepts iteratee
 	// takes array of IDs and calls function on them to work out which guard is sleepiest
-	return +maxBy(Object.keys(sleepyRef), (id) => sleepyRef[id]).substring(1);
+	return maxBy(Object.keys(sleepyRef), (id) => sleepyRef[id]);
 };
 
 const dataById = sortByGuardID(data);
