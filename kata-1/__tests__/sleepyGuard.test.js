@@ -1,4 +1,7 @@
-const { calculateTimeAsleep, findSleepiest } = require('../findSleepiestGuard');
+const {
+	calculateTimeAsleep,
+	findSleepiest
+} = require('../kata-solution-files/findSleepiestGuard');
 
 describe('calculateTimeAsleep', () => {
 	test('should return 0 for single guard who never sleeps', () => {

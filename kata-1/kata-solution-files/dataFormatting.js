@@ -20,7 +20,6 @@ const formattedData = rawData.map((datum) => {
 	// use the date and time to create date string and create new Date object
 	const dateObj = new Date(Date.parse(`${date}T${time}:00.000Z`));
 
-	// use regex to pull out message
 	const log = datum.match(/\] (.*)/)[1];
 
 	return { log, date: dateObj };

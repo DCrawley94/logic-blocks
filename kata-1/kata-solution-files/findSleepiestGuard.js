@@ -12,20 +12,18 @@ const data = require('./dataFormatting');
 // ORGANISES DATA BY GUARD ID
 
 const sortByGuardID = (data) => {
-	const dataByGuardId = {};
 	currentGuard = '';
 
-	data.forEach((datum) => {
+	return data.reduce((refByGuardID, datum) => {
 		const guardID = datum.log.match(/#\d*/) ? datum.log.match(/#\d*/)[0] : null;
-		if (guardID && !dataByGuardId.hasOwnProperty(guardID))
-			dataByGuardId[guardID] = [];
-		if (guardID && !(currentGuard === guardID)) {
-			currentGuard = guardID;
-		}
-		dataByGuardId[currentGuard].push(datum);
-	});
 
-	return dataByGuardId;
+		if (guardID && !refByGuardID[guardID]) refByGuardID[guardID] = [];
+		if (guardID && !(currentGuard === guardID)) currentGuard = guardID;
+
+		refByGuardID[currentGuard].push(datum);
+
+		return refByGuardID;
+	}, {});
 };
 
 // CALCULATES TIME EACH GUARD SPENT ASLEEP

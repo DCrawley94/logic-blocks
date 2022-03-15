@@ -2,7 +2,7 @@ const {
 	tallyMinutes,
 	sleepiestGuardData,
 	createMinuteRef
-} = require('../findSleepiestMinute');
+} = require('../kata-solution-files/findSleepiestMinute');
 
 describe('tallyMinutes', () => {
 	test('should return object containing representation of minutes', () => {
