@@ -18,7 +18,7 @@ const sortByGuardID = (data) => {
 		const guardID = datum.log.match(/#\d*/) ? datum.log.match(/#\d*/)[0] : null;
 
 		if (guardID && !refByGuardID[guardID]) refByGuardID[guardID] = [];
-		if (guardID && !(currentGuard === guardID)) currentGuard = guardID;
+		if (guardID) currentGuard = guardID;
 
 		refByGuardID[currentGuard].push(datum);
 
@@ -37,7 +37,7 @@ const calculateTimeAsleep = (data) => {
 
 		data[id].forEach((datum, i) => {
 			// match with string saying when guard is asleep
-			if (/asleep/g.test(datum.log)) {
+			if (/asleep/.test(datum.log)) {
 				// work out difference between sleep times and awake times and convert to minutes
 				const sleepTime = datum.date;
 				const awakeTime = data[id][i + 1].date;

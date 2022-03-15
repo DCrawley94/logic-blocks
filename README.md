@@ -1,4 +1,4 @@
-# :sparkles: :ok_hand: :spaghetti: **absolute spaghét** :ok_hand: :spaghetti: :sparkles:
+# :sparkles: :ok_hand: :spaghetti: **absolute spaghét** :spaghetti: :ok_hand: :sparkles:
 
 > Solutions for `logic-block` katas
 
