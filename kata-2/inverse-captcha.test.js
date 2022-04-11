@@ -22,4 +22,3 @@ test('should return 0 if called with an array of length < 1', () => {
 	expect(inverseCaptcha([])).toBe(0);
 	expect(inverseCaptcha([1])).toBe(0);
 });
-// Handle single element array
