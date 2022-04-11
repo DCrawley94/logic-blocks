@@ -12,6 +12,8 @@ function inverseCaptcha(digits) {
 	const lastDigit = digits[digits.length - 1];
 	let sum = 0;
 
+	if (digits.length < 2) return sum;
+
 	for (let i = 0; i < digits.length; i++) {
 		const prevInt = digits[i - 1] || lastDigit;
 		const currInt = digits[i] || firstDigit;

@@ -15,3 +15,11 @@ test('function should only return sum of digits that match the previous digit', 
 test('function should return correct sum when first digit matches last digit', () => {
 	expect(inverseCaptcha([1, 2, 1])).toBe(1);
 });
+
+// --- SAD PATH :( ---
+
+test('should return 0 if called with an array of length < 1', () => {
+	expect(inverseCaptcha([])).toBe(0);
+	expect(inverseCaptcha([1])).toBe(0);
+});
+// Handle single element array
