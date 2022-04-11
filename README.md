@@ -8,14 +8,6 @@
 npm install
 ```
 
-## Usage
-
-To view the answer for a specific kata please run the following command with the kata number as so:
-
-```sh
-npm run print-answer KATA_NUMBER_HERE
-```
-
 ## Run tests
 
 ```sh
