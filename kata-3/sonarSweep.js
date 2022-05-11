@@ -1,13 +1,6 @@
 const fs = require('fs');
 const { formatInput } = require('./helpers');
 
-const rawData = fs.readFileSync(
-	'/Users/dcrawley/Documents/Code/problem-solving/logic-blocks/kata-3/input.txt',
-	'utf-8'
-);
-
-const formattedData = formatInput(rawData); // [100, 200, etc...]
-
 function sonarSweep(depthList) {
 	let depthIncreaseCount = 0;
 
@@ -19,6 +12,15 @@ function sonarSweep(depthList) {
 
 	return depthIncreaseCount;
 }
+
+// Answer calculated below
+
+const rawData = fs.readFileSync(
+	'/Users/dcrawley/Documents/Code/problem-solving/logic-blocks/kata-3/input.txt',
+	'utf-8'
+);
+
+const formattedData = formatInput(rawData); // [100, 200, etc...]
 
 console.log(`The number of depth increases is ${sonarSweep(formattedData)}`);
 
