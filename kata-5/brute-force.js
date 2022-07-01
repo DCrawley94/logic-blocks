@@ -9,14 +9,14 @@ function isDivisibleToTwenty(num) {
 	return true;
 }
 
-function findSmallest() {
+function findLCM() {
 	let isFound = false;
 	let num = 20;
 	while (!isFound) {
-		num++;
+		num += 20;
 		isFound = isDivisibleToTwenty(num);
 	}
 	return num;
 }
 
-module.exports = findSmallest;
+module.exports = findLCM;
