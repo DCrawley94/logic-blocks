@@ -1,0 +1,446 @@
+{
+  "document": {
+    "id": "doc",
+    "name": "New Document",
+    "version": 15.5,
+    "pages": {
+      "page": {
+        "id": "page",
+        "name": "Page 1",
+        "childIndex": 1,
+        "shapes": {
+          "da41018d-31b8-430d-09a7-f010b427740b": {
+            "id": "da41018d-31b8-430d-09a7-f010b427740b",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 1,
+            "point": [
+              -241.89,
+              109.09
+            ],
+            "rotation": 0,
+            "text": "Main Problem\n \nGiven code will contain a number of lines containing any number of code chunks\n \nGiven this input I need to output an array indicating coding errors for each line",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "d26b1ca5-5f03-4a5f-1167-ae54fc154f2d": {
+            "id": "d26b1ca5-5f03-4a5f-1167-ae54fc154f2d",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 2,
+            "point": [
+              -490.29,
+              286.39
+            ],
+            "rotation": 0,
+            "bend": 0,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  263.2,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  305.68
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  131.6,
+                  152.84
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "c5b00411-0e7a-4fca-1d08-68e06e84405d": {
+            "id": "c5b00411-0e7a-4fca-1d08-68e06e84405d",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 3,
+            "point": [
+              -706.67,
+              622.18
+            ],
+            "rotation": 0,
+            "text": "Sub Problem 1 - Corrupted lines\n(Corrupted = chunk closes with wrong char)\n \nTrack *type* of brackets, do they match?\n ",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "b26848e5-3e05-4705-0b64-c7cbb75ce0a2": {
+            "id": "b26848e5-3e05-4705-0b64-c7cbb75ce0a2",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 4,
+            "point": [
+              494.43,
+              259.67
+            ],
+            "rotation": 0,
+            "bend": 0.000001673929792312731,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  310.07,
+                  346.23
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  155.04,
+                  173.12
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "1aecc392-98ca-45f3-33ae-91b0b71341ab": {
+            "id": "1aecc392-98ca-45f3-33ae-91b0b71341ab",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 5,
+            "point": [
+              382.84,
+              628.26
+            ],
+            "rotation": 0,
+            "text": "Sub Problem 2 - Incomplete Lines\n(Incomplete = missing 1 or more closing chars)\n \nDoes the number of open brackets match the number of closing",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "2fd01bdc-6d3f-4e27-3f95-7d4a538293a0": {
+            "id": "2fd01bdc-6d3f-4e27-3f95-7d4a538293a0",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 6,
+            "point": [
+              -848.61,
+              763.39
+            ],
+            "rotation": 0,
+            "bend": 0.00007956773157566324,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  130.03,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  87.79
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  65.02,
+                  43.9
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "f2064769-cc8d-4038-1f17-6c1851d389b2": {
+            "id": "f2064769-cc8d-4038-1f17-6c1851d389b2",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 7,
+            "point": [
+              -1127.6630675470096,
+              881.661829460757
+            ],
+            "rotation": 0,
+            "text": "How to identify wrong char?\n \n. Closing brack when there's no related opener\n ",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "3e5e636d-db4f-4315-041b-aef6c580f45b": {
+            "id": "3e5e636d-db4f-4315-041b-aef6c580f45b",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 8,
+            "point": [
+              -513.99,
+              759.64
+            ],
+            "rotation": 0,
+            "bend": 0.00009443846799424594,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  18.37,
+                  102.6
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  9.19,
+                  51.3
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "0d21959a-e408-497d-043a-01548c7f6544": {
+            "id": "0d21959a-e408-497d-043a-01548c7f6544",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 9,
+            "point": [
+              -652.3,
+              873.55
+            ],
+            "rotation": 0,
+            "text": "Keeping track of open bracks?\n \nObjects\n \n{ type: ' [ ' , contains: 'xyz' , corrupt: false}",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "46394a4c-8ba2-404f-2af5-82ce2ca1ec5d": {
+            "id": "46394a4c-8ba2-404f-2af5-82ce2ca1ec5d",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 10,
+            "point": [
+              -292.72760105094505,
+              734.1942771288686,
+              0.5
+            ],
+            "rotation": 0,
+            "bend": 0.00005481189146846842,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  91.19,
+                  88.84
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  45.6,
+                  44.42
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "519454e3-02a0-4423-1dbc-9ee754aa8c09": {
+            "id": "519454e3-02a0-4423-1dbc-9ee754aa8c09",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 11,
+            "point": [
+              -245.38,
+              829.02
+            ],
+            "rotation": 0,
+            "text": "Nested chunks?\n \nNested Objects",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          }
+        },
+        "bindings": {}
+      }
+    },
+    "pageStates": {
+      "page": {
+        "id": "page",
+        "selectedIds": [],
+        "camera": {
+          "point": [
+            0,
+            0
+          ],
+          "zoom": 1
+        },
+        "editingId": null
+      }
+    },
+    "assets": {}
+  },
+  "assets": {}
+}
